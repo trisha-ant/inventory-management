@@ -102,84 +102,83 @@ export default {
 
 <style scoped>
 .filters-bar {
-  background: #f8fafc;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 0.75rem 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.875rem 2rem;
   position: sticky;
-  top: 70px;
+  top: 0;
   z-index: 90;
 }
 
 .filters-container {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
 }
 
 .filters-grid {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
   flex: 1;
 }
 
 .filter-group {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 160px;
 }
 
 .filter-group label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #64748b;
-  white-space: nowrap;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .filter-select {
-  padding: 0.4rem 0.75rem;
-  border: 1px solid #cbd5e1;
+  padding: 0.4375rem 0.625rem;
+  border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 0.813rem;
-  color: #0f172a;
-  background: white;
+  background: var(--surface);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  color: var(--text-primary);
   cursor: pointer;
-  transition: all 0.2s;
-  font-weight: 500;
-  min-width: 140px;
+  transition: border-color 0.15s ease;
 }
 
 .filter-select:hover {
-  border-color: #94a3b8;
+  border-color: var(--border-hover);
 }
 
 .filter-select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
 .reset-filters-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.4rem;
-  background: white;
-  border: 1px solid #e2e8f0;
+  padding: 0.4375rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  color: #64748b;
+  color: var(--text-secondary);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
   flex-shrink: 0;
+  align-self: flex-end;
 }
 
 .reset-filters-btn:hover:not(:disabled) {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-  color: #0f172a;
+  border-color: var(--border-hover);
+  color: var(--text-primary);
 }
 
 .reset-filters-btn:disabled {
@@ -188,7 +187,7 @@ export default {
 }
 
 .reset-filters-btn svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 </style>
